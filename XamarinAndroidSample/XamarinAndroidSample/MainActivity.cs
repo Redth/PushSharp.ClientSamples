@@ -54,7 +54,7 @@ namespace XamarinAndroidSample
         protected override void OnHandleIntent (Intent intent)
         {
             // Get the new token and send to the server
-            var instanceID = InstanceID.GetInstance (this);
+            var instanceID = InstanceID.GetInstance (Application.Context);
             var token = instanceID.GetToken (GCM_SENDER_ID, GoogleCloudMessaging.InstanceIdScope);
 
 
@@ -71,8 +71,10 @@ namespace XamarinAndroidSample
                 // Fire the event for any UI subscribed to it
                 TokenRefreshed?.Invoke (token);
 
-                Android.Util.Log.Debug ("GCM-SAMPLE", "OnTokenRefresh: {0}", token);
-            }
+                Android.Util.Log.Debug ("GCM-SAMPLE", "OnTokenRefresh called");
+            } 
+
+            Android.Util.Log.Debug ("GCM-SAMPLE", "Token: {0}", token);
         }
     }
 

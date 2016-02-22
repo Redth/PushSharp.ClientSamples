@@ -2279,6 +2279,9 @@ namespace XamarinAndroidSample
 			// aapt resource value: 0x7f06002f
 			public const int common_signin_button_text_long = 2131099695;
 			
+			// aapt resource value: 0x7f060033
+			public const int google_app_id = 2131099699;
+			
 			// aapt resource value: 0x7f060013
 			public const int status_bar_notification_info_overflow = 2131099667;
 			
